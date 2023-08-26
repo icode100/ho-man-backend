@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-1=+(gz+7%60*8*skbm3v0naf(olmn49&k6f!gkf6w@zj_@$2_3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['ho-man-backend.azurewebsites.net']
+ALLOWED_HOSTS = ['homan-backend-server.azurewebsites.net']
 
 
 # Application definition
@@ -192,8 +192,13 @@ SIMPLE_JWT = {
 }
 PASSWORD_RESET_TIMEOUT = 900
 
+CSRF_TRUSTED_ORIGINS = ['https://homan-backend-server.azurewebsites.net']
+CSRF_COOKIE_SECURE = True
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
+    'https://homan-backend-server.azurewebsites.net/'
 ]
+
+
 
